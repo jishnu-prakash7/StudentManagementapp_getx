@@ -15,8 +15,6 @@ class StudentDataController extends GetxController {
   fetchStudents() async {
     var student = await studentRepository.getStudent();
     allStudents.value = student;
-    // update();
-    print('Fetched students: ${allStudents.length}');
   }
 
   addStudent(StudentModel studentModel) {

@@ -6,8 +6,8 @@ import 'package:student_management/constants/colors.dart';
 import 'package:student_management/constants/constants.dart';
 import 'package:student_management/model/student_model.dart';
 import 'package:student_management/presentation/add_student/widgets/text_form_field.dart';
-import 'package:student_management/presentation/widgets/image_picker_controller.dart';
-import 'package:student_management/presentation/widgets/student_controller.dart';
+import 'package:student_management/presentation/controllers/image_picker_controller.dart';
+import 'package:student_management/presentation/controllers/student_controller.dart';
 
 class updateStudent extends StatelessWidget {
   final String grade;

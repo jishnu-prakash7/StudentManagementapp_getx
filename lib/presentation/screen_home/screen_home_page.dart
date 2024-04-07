@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:student_management/constants/colors.dart';
+import 'package:student_management/constants/constants.dart';
 import 'package:student_management/presentation/add_student/screen_add_student.dart';
 import 'package:student_management/presentation/screen_view_student/screen_view_students.dart';
 
@@ -27,10 +29,14 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            elevatedbutton(size, 'Add Details', const AddStudent()),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 250,
+              width: 250,
+              child: Lottie.asset('assets/animations/student.json'),
             ),
+            height20,
+            elevatedbutton(size, 'Add Details', const AddStudent()),
+            height10,
             elevatedbutton(size, 'View List', const ViewStudentPage())
           ],
         ),
@@ -44,7 +50,7 @@ class HomePage extends StatelessWidget {
         Get.to(page);
       },
       style: ElevatedButton.styleFrom(
-          minimumSize: Size(size.width - 120, 60),
+          minimumSize: Size(size.width - 120, 50),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
       child: Text(
